@@ -1,0 +1,255 @@
+﻿<Window x:Class="Soustavy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Soustavy"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="200"
+        Width="350"
+        MaxHeight="450"
+        MaxWidth="800"
+        MinHeight="200"
+        MinWidth="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Label Content="DEC:"
+                   DockPanel.Dock="Left" />
+            <TextBox x:Name="DecimalTB"
+                     DockPanel.Dock="Left"
+                     Width="100"
+                     Height="20"
+                     TextChanged="DecimalTB_TextChanged" />
+            <DockPanel />
+        </DockPanel>
+        
+
+        <DockPanel Grid.Row="1">
+            <Label Content="HEX:"
+                   DockPanel.Dock="Left" />
+            <TextBox x:Name="HexTB"
+                     DockPanel.Dock="Left"
+                     Width="100"
+                     Height="20"
+                     TextChanged="HexTB_TextChanged" />
+            <DockPanel />
+        </DockPanel>
+
+        <DockPanel Grid.Row="2">
+            <Label Content="BIN:"
+                   DockPanel.Dock="Left" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="0"
+                          VerticalAlignment="Center"
+                          x:Name="SestnactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked"/>
+                <CheckBox Grid.Column="1"
+                          VerticalAlignment="Center"
+                          x:Name="PatnactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked"/>
+                <CheckBox Grid.Column="2"
+                          VerticalAlignment="Center"
+                          x:Name="CtrnactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked"/>
+                <CheckBox Grid.Column="3"
+                          VerticalAlignment="Center"
+                          x:Name="TrinactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked"/>
+                <CheckBox Grid.Column="4"
+                          VerticalAlignment="Center"
+                          x:Name="DvanactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked"/>
+                <CheckBox Grid.Column="5"
+                          VerticalAlignment="Center"
+                          x:Name="JedenactyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="6"
+                          VerticalAlignment="Center"
+                          x:Name="DesatyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="7"
+                          VerticalAlignment="Center"
+                          x:Name="DevatyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="8"
+                          VerticalAlignment="Center"
+                          x:Name="OsmyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="9"
+                          VerticalAlignment="Center"
+                          x:Name="SedmyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="10"
+                          VerticalAlignment="Center"
+                          x:Name="SestyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="11"
+                          VerticalAlignment="Center"
+                          x:Name="PatyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="12"
+                          VerticalAlignment="Center"
+                          x:Name="CtvrtyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="13"
+                          VerticalAlignment="Center"
+                          x:Name="TretiBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="14"
+                          VerticalAlignment="Center"
+                          x:Name="DruhyBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+                <CheckBox Grid.Column="15"
+                          VerticalAlignment="Center"
+                          x:Name="PrvniBit"
+                          Checked="bit_Checked"
+                          Unchecked="bit_Checked" />
+            </Grid>
+            <DockPanel />
+        </DockPanel>
+
+        <Slider Grid.Row="3" 
+                Margin="5,10,5,0"
+                TickFrequency="1"
+                Maximum="65535"
+                Minimum="1"
+                IsSnapToTickEnabled="True"
+                x:Name="Slider"
+                ValueChanged="Slider_ValueChanged" />
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Column="0"
+                      Height="25"
+                      Width="35"
+                      Margin="0,0,0,20"
+                      x:Name="ComboBox1">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>a</ComboBoxItem>
+                <ComboBoxItem>b</ComboBoxItem>
+                <ComboBoxItem>c</ComboBoxItem>
+                <ComboBoxItem>d</ComboBoxItem>
+                <ComboBoxItem>e</ComboBoxItem>
+                <ComboBoxItem>f</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Column="1"
+                      Height="25"
+                      Width="35"
+                      Margin="0,0,0,20"
+                      x:Name="ComboBox2">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>a</ComboBoxItem>
+                <ComboBoxItem>b</ComboBoxItem>
+                <ComboBoxItem>c</ComboBoxItem>
+                <ComboBoxItem>d</ComboBoxItem>
+                <ComboBoxItem>e</ComboBoxItem>
+                <ComboBoxItem>f</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Column="2"
+                      Height="25"
+                      Width="35"
+                      Margin="0,0,0,20"
+                      x:Name="ComboBox3">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>a</ComboBoxItem>
+                <ComboBoxItem>b</ComboBoxItem>
+                <ComboBoxItem>c</ComboBoxItem>
+                <ComboBoxItem>d</ComboBoxItem>
+                <ComboBoxItem>e</ComboBoxItem>
+                <ComboBoxItem>f</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Grid.Column="3"
+                      Height="25"
+                      Width="35"
+                      Margin="0,0,0,20"
+                      x:Name="ComboBox4">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+                <ComboBoxItem>7</ComboBoxItem>
+                <ComboBoxItem>8</ComboBoxItem>
+                <ComboBoxItem>9</ComboBoxItem>
+                <ComboBoxItem>a</ComboBoxItem>
+                <ComboBoxItem>b</ComboBoxItem>
+                <ComboBoxItem>c</ComboBoxItem>
+                <ComboBoxItem>d</ComboBoxItem>
+                <ComboBoxItem>e</ComboBoxItem>
+                <ComboBoxItem>f</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+    </Grid>
+</Window>
